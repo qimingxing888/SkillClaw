@@ -1,0 +1,35 @@
+{
+  "description": "Model Context Protocol (MCP) Server Registry for SkillClaw",
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+      "description": "File system access for reading/writing files"
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"],
+      "description": "Web content fetching capabilities"
+    }
+  },
+  "builtInTools": [
+    {
+      "name": "execute_python",
+      "description": "Execute Python code in a sandboxed environment",
+      "handler": "core.code_executor.execute",
+      "enabled": true
+    },
+    {
+      "name": "search_memory",
+      "description": "Search agent memory for relevant information",
+      "handler": "core.memory_manager.search_memories",
+      "enabled": true
+    },
+    {
+      "name": "add_memory",
+      "description": "Add information to agent memory",
+      "handler": "core.memory_manager.add_global_memory",
+      "enabled": true
+    }
+  ]
+}

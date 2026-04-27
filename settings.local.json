@@ -1,0 +1,30 @@
+{
+  "llm": {
+    "provider": "kimi",
+    "model": "kimi-k2.5",
+    "api_base": "https://api.moonshot.cn/v1",
+    "api_key": "sk-dummy",
+    "temperature": 1.0,
+    "max_tokens": 8192,
+    "timeout": 60,
+    "retry_attempts": 3
+  },
+  "agent": {
+    "name": "SkillClaw",
+    "version": "1.0.0",
+    "max_iterations": 10,
+    "enable_streaming": true,
+    "auto_save_memory": true
+  },
+  "memory": {
+    "session_ttl_hours": 24,
+    "max_context_messages": 50,
+    "auto_summarize_threshold": 20
+  },
+  "ui": {
+    "theme": "default",
+    "language": "zh",
+    "show_tool_calls": true,
+    "show_memory_panel": true
+  }
+}
